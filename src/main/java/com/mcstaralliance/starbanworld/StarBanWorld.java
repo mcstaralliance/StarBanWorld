@@ -17,6 +17,7 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
     public void onEnable() {
         saveDefaultConfig();
         Bukkit.getPluginManager().registerEvents(this, this);
+
     }
 
     @EventHandler
@@ -28,7 +29,7 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
             return;
         }
 
-        if (list.contains(worldName)) {
+        if (!list.contains(worldName)) {
             if (!player.hasPermission("world." + worldName)) {
                 String message = ChatColor.RED + "你没有前往 " + worldName + " 世界的权限";
                 player.sendMessage(message);
@@ -46,7 +47,7 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
             return;
         }
 
-        if (list.contains(worldName)) {
+        if (!list.contains(worldName)) {
             if (!player.hasPermission("world." + worldName)) {
                 String message = ChatColor.RED + "你没有前往 " + worldName + " 世界的权限";
                 player.sendMessage(message);
