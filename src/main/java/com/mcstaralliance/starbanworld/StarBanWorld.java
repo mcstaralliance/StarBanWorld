@@ -30,7 +30,7 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
 
         if (list.contains(worldName)) {
             if (!player.hasPermission("world." + worldName)) {
-                String message = ChatColor.RED + "你没有前往" + worldName + "世界的权限";
+                String message = ChatColor.RED + "你没有前往 " + worldName + " 世界的权限";
                 player.sendMessage(message);
                 event.setCancelled(true);
             }
@@ -48,7 +48,7 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
 
         if (list.contains(worldName)) {
             if (!player.hasPermission("world." + worldName)) {
-                String message = ChatColor.RED + "你没有前往" + worldName + "世界的权限";
+                String message = ChatColor.RED + "你没有前往 " + worldName + " 世界的权限";
                 player.sendMessage(message);
                 event.setCancelled(true);
             }
