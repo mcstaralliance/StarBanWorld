@@ -27,15 +27,14 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
         if (worldName.equalsIgnoreCase(player.getName())) {
             return;
         }
+
         if (list.contains(worldName)) {
-            return;
+            if (!player.hasPermission("world." + worldName)) {
+                String message = ChatColor.RED + "你没有前往" + worldName + "世界的权限";
+                player.sendMessage(message);
+                event.setCancelled(true);
+            }
         }
-        if (player.hasPermission("world." + worldName)) {
-            return;
-        }
-        String message = ChatColor.RED + "你没有前往" + worldName + "世界的权限";
-        player.sendMessage(message);
-        event.setCancelled(true);
     }
 
     @EventHandler
@@ -46,16 +45,13 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
         if (worldName.equalsIgnoreCase(player.getName())) {
             return;
         }
+
         if (list.contains(worldName)) {
-            return;
+            if (!player.hasPermission("world." + worldName)) {
+                String message = ChatColor.RED + "你没有前往" + worldName + "世界的权限";
+                player.sendMessage(message);
+                event.setCancelled(true);
+            }
         }
-        if (player.hasPermission("world." + worldName)) {
-            return;
-        }
-        String message = ChatColor.RED + "你没有前往" + worldName + "世界的权限";
-        player.sendMessage(message);
-        event.setCancelled(true);
     }
-
-
 }
