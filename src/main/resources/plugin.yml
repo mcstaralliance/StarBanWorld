@@ -1,0 +1,4 @@
+name: StarBanWorld
+version: '${project.version}'
+main: com.mcstaralliance.starbanworld.StarBanWorld
+api-version: '1.18'
