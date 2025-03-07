@@ -1,0 +1,32 @@
+name: StarBanWorld
+version: '${project.version}'
+main: com.mcstaralliance.starbanworld.StarBanWorld
+api-version: 1.20  // 更新 API 版本
+authors: LDS_XiaoYe
+description: 控制玩家访问世界的权限
+commands:
+  starbanworld:
+    description: StarBanWorld 主命令
+    aliases: [sbw]
+    usage: /sbw help
+permissions:
+  starbanworld.admin:
+    description: 允许管理白名单和插件配置
+    default: op
+    children:   // 新增权限继承
+      starbanworld.teleport: true
+      starbanworld.info: true
+  starbanworld.teleport:
+    description: 允许使用世界传送功能
+    default: false  // 默认关闭传送权限
+  starbanworld.info:
+    description: 允许查看世界详细信息
+    default: true
+  starbanworld.world.*:
+    description: 允许无限制访问所有世界
+    default: op
+  starbanworld.reload:  // 新增独立重载权限
+    description: 允许重载插件配置
+    default: op
+libraries:  // 添加依赖声明
+  - com.sk89q.worldguard:worldguard-bukkit:7.1.0-SNAPSHOT

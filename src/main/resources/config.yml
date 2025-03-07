@@ -1,0 +1,12 @@
+# StarBanWorld 配置文件
+
+# 白名单世界列表
+# 这些世界所有玩家都可以访问
+whitelist:
+  - world
+  - world_nether
+  - world_the_end
+
+# 自定义消息
+messages:
+  no-permission: "&c你没有前往 %world% 世界的权限。"
