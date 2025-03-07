@@ -26,6 +26,7 @@ public final class StarBanWorld extends JavaPlugin implements Listener {
     public void onEnable() {
         // 初始化配置管理器
         this.configManager = new ConfigManager(this);
+        loadConfig();
         
         // 注册事件监听器
         Bukkit.getPluginManager().registerEvents(new WorldAccessListener(this), this);
